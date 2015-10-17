@@ -4,6 +4,13 @@ Rails.application.routes.draw do
   resources :sms
   devise_for :users
   get '/faq' => 'static#faq', as: :faq
+  get '/faq1' => 'static#faq1', as: :faq1
+  get '/faq2' => 'static#faq2', as: :faq2
+  get '/faq3' => 'static#faq3', as: :faq3
+
+
+
+
 
   resources :users do
     resources :profiles
