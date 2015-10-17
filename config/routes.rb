@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :clinic_locations
+  resources :sms
   devise_for :users
 
   resources :users do

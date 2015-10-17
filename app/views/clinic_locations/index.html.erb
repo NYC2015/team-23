@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinic Locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Address</th>
+      <th>Phone number</th>
+      <th>Long</th>
+      <th>Lat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinic_locations.each do |clinic_location| %>
+      <tr>
+        <td><%= clinic_location.title %></td>
+        <td><%= clinic_location.address %></td>
+        <td><%= clinic_location.phone_number %></td>
+        <td><%= clinic_location.long %></td>
+        <td><%= clinic_location.lat %></td>
+        <td><%= link_to 'Show', clinic_location %></td>
+        <td><%= link_to 'Edit', edit_clinic_location_path(clinic_location) %></td>
+        <td><%= link_to 'Destroy', clinic_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic location', new_clinic_location_path %>
