@@ -5,10 +5,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+	<%= stylesheet_link_tag "css/simple-sidebar" %>
+	<%= stylesheet_link_tag "home" %>
 </head>
 <body>
 
 <%= yield %>
 
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+	</script>
+
 </body>
 </html>
+
