@@ -1,10 +1,15 @@
 class ClinicLocationsController < ApplicationController
   before_action :set_clinic_location, only: [:show, :edit, :update, :destroy]
+  respond_to :json
 
   # GET /clinic_locations
   # GET /clinic_locations.json
   def index
     @clinic_locations = ClinicLocation.all
+
+    # respond_to do |f|
+    #   f.json { render :index, location: @clinic_locations }
+    # end
   end
 
   # GET /clinic_locations/1

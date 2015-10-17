@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :clinic_locations
   resources :sms
   devise_for :users
+  get '/faq' => 'static#faq', as: :faq
 
   resources :users do
     resources :profiles

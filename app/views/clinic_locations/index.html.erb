@@ -1,3 +1,131 @@
+
+
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+
+
+
+
+    <h1> Help Near You </h1>
+    <h2> If you need immediate help please call (646) 673-6938 </h2>
+    <div class='map'>
+    <h2> Map </h2>
+  <div id="googleMap" style="width:500px;height:380px;"></div>
+
+    <h2> Clinic Directory </h2>
+
+
+<% locations = []%>
+<% @clinic_locations.all.each do |f| %>
+  <% m = f.long + ", " + f.lat %>
+  <% locations << m %>
+<% end %>
+
+<div id="location-map">
+  <%= locations %>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script>
+   console.log("Works");
+var myCenter = new google.maps.LatLng(-26.2044,28.0456);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+ //for (DATABASE LOOP)
+  $(document).ready(function () {
+      $.ajax({
+          type: 'GET',
+          url: 'http://localhost:3000/clinic_locations.json',
+          data: { get_param: 'value' },
+          success: function (data)
+          {
+            // console.log(data);
+            for(var i=0; i < data.length; i++)
+            {
+              // console.log(data[i].long);
+              var coord = data[i].long +  ", " + data[i].lat;
+              console.log(coord);
+
+                var marker=new google.maps.Marker({
+                  position:new google.maps.LatLng(coord),
+                    title: 'Hello World!'
+                  });
+
+                marker.setMap(map);
+                console.log("end of loop");
+            }
+          }
+      });
+  });
+
+
+
+    // var marker=new google.maps.Marker({
+    //   position:new google.maps.LatLng(<%= locations.first %>),
+    //     title: 'Hello World!'
+    //   });
+    // marker.setMap(map);
+
+    // var marker=new google.maps.Marker({
+    //   position:new google.maps.LatLng(-24.166403, 28.060806),
+    //     title: 'Hello World!'
+    //   });
+    // marker.setMap(map);
+
+  }
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+<!--
+Malvern Clinic
+St Frusquin St, Johannesburg, 2094, South Africa
++27 11 622 1245
+-26.185699, 28.118376
+
+Lenmed Private Hospital
+Marlin Ave, Lenasia, Johannesburg, 1821, South Africa
++27 11 213 2000
+-26.329136, 27.863686
+
+Glen Allen Clinic
+Rietfontein Rd, Allen Glen, Johannesburg, 1619, South Africa
++27 11 391 2390
+-26.036238, 28.238382
+
+
+Yeoville Clinic
+Kenmere Rd, Johannesburg, South Africa
++27 11 648 0212
+-26.166403, 28.060806
+
+Westbury Clinic
+Du Plessis St, Johannesburg, 2093, South Africa
++27 11 673 1002
+-26.168093, 27.972332
+
+Life New Kensington Clinic
+23 Roberts Ave, Johannesburg, 2101, South Africa
++27 11 538 4700
+-26.191462, 28.075552
+ -->
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Clinic Locations</h1>
@@ -22,6 +150,7 @@
         <td><%= clinic_location.phone_number %></td>
         <td><%= clinic_location.long %></td>
         <td><%= clinic_location.lat %></td>
+
         <td><%= link_to 'Show', clinic_location %></td>
         <td><%= link_to 'Edit', edit_clinic_location_path(clinic_location) %></td>
         <td><%= link_to 'Destroy', clinic_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
