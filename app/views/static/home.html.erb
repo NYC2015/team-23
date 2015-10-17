@@ -3,8 +3,8 @@
 
 <head>
 	<link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-	<link href="../../assets/bootstrap/css/simple-sidebar.css" rel="stylesheet"/>
-	<link href="home.css" rel="stylesheet" type="text/css"/>
+	<%= stylesheet_link_tag "css/simple-sidebar" %>
+	<%= stylesheet_link_tag "home" %>
 </head>
 
 <body>
@@ -31,8 +31,6 @@
 						<%= link_to('Get Started', new_user_registration_path, class: "btn btn-primary btn-lg")  %>
 						<p>Already a user?   <%= link_to('Login', new_user_session_path)  %></p>
 					</div>
-
-					<p>This is a homepage, must add content</p>
 				</div>
 			</div>
 		</div>
