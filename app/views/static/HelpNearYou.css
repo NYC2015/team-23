@@ -1,8 +1,10 @@
 h1 {
 	text-align: center;
-	background-color:red;
+	background-color:#86D594;
 }
 div.map{
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
-	background-color:green;
+
 }
