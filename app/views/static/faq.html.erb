@@ -1,127 +1,216 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Important Info</title>
-<link rel="stylesheet" type="text/css" href="faq.css" />
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
-<link href="../../assets/stylesheets/css/bootstrap.min.css" rel="stylesheet"/>
-
-
-</head>
-
-
 <div id="wrapper" class="active">
-	<div id="sidebar-wrapper">
-		<ul id="sidebar_menu" class="sidebar-nav">
-			<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
-			<li role="presentation" class="active"><a href="#home">Home</a></li>
-			<li role="presentation"><a href="forums.html.erb">Forums</a></li>
-			<li role="presentation"><a href="faq.html.erb">HIV FAQ</a></li>
-			<li role="presentation"><a href="HelpNearYou.html.erb">Help Near You</a></li>
-		</ul>
-	</div>
-</div>
+  <div id="page-content-wrapper">
+      <div class="page-content inset">
 
-<div class="jumbotron">
-<h1><center>Important Info</center></h1>
-<p><center>FAQs</center></p>
-</div>
+        <%= render 'shared/nav' %>
 
-<div id="Faq_wrap">
-<p>In 2011 there were an estimated 34 million people living with HIV, with 2.7 million new infections worldwide. In the South-East Asia Region1 there were an estimated 3.5 million HIV infected people with an estimated 210 000 people that became newly infected with HIV. The good news is that the number of new infections in the Region is declining and deaths from AIDS have dropped for those that are HIV infected and receiving treatment.</p>
+        <div class="row">
+<!--           <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4">.col-md-4</div>
+          <div class="col-md-4">.col-md-4</div> -->
+      <div class="col-md-12">
+<img src="<%= image_path "banner1.jpg" %>"/>
+<div style="margin-bottom:25px;"></div>
 
-<p>However, after more than 30 years since HIV was first identified there is still no cure or an effective vaccine for HIV. On a positive note, HIV is now a chronic manageable disease due to improved medicines and increased support and care.</p>
+<h2><center>How does HIV pass from one person to another?</center></h2>
 
-<p>Today many people are not aware that they are HIV infected because they either feel well or they have not taken an HIV test. When people are not aware they have HIV, they can spread the infection to others as well as not have access to medicines that can help maintain a healthy life. HIV does not discriminate between different types of people, age or gender and can affect anyone. It is for this reason alone that everyone should get tested for HIV.</p>
-</div>
+<p>Generally, HIV transmits through unprotected anal and vaginal sex, sharing injection drug needles, and from mother to child during pregnancy, childbirth and breastfeeding. However, exactly HOW this happens is often a mystery to most folks. Luckily, there is a simple three-part equation that helps to explain the process of HIV transmission.</p>
 
-<div id="Faq_wrap_2">
-<p>In 2011 there were an estimated 34 million people living with HIV, with 2.7 million new infections worldwide. In the South-East Asia Region1 there were an estimated 3.5 million HIV infected people with an estimated 210 000 people that became newly infected with HIV. The good news is that the number of new infections in the Region is declining and deaths from AIDS have dropped for those that are HIV infected and receiving treatment.</p>
+<p>First, you need to have someone infected with HIV, and someone to pass it on to. Then, HIV needs three things to pass from one person to another:</p>
 
-<p>However, after more than 30 years since HIV was first identified there is still no cure or an effective vaccine for HIV. On a positive note, HIV is now a chronic manageable disease due to improved medicines and increased support and care.</p>
-
-<p>Today many people are not aware that they are HIV infected because they either feel well or they have not taken an HIV test. When people are not aware they have HIV, they can spread the infection to others as well as not have access to medicines that can help maintain a healthy life. HIV does not discriminate between different types of people, age or gender and can affect anyone. It is for this reason alone that everyone should get tested for HIV.</p>
-</div>
-
-<div id="Faq_wrap_3">
-<p>In 2011 there were an estimated 34 million people living with HIV, with 2.7 million new infections worldwide. In the South-East Asia Region1 there were an estimated 3.5 million HIV infected people with an estimated 210 000 people that became newly infected with HIV. The good news is that the number of new infections in the Region is declining and deaths from AIDS have dropped for those that are HIV infected and receiving treatment.</p>
-
-<p>However, after more than 30 years since HIV was first identified there is still no cure or an effective vaccine for HIV. On a positive note, HIV is now a chronic manageable disease due to improved medicines and increased support and care.</p>
-
-<p>Today many people are not aware that they are HIV infected because they either feel well or they have not taken an HIV test. When people are not aware they have HIV, they can spread the infection to others as well as not have access to medicines that can help maintain a healthy life. HIV does not discriminate between different types of people, age or gender and can affect anyone. It is for this reason alone that everyone should get tested for HIV.</p>
-</div>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../../assets/javascripts/js/bootstrap.min.js"></script>
-
-	<script>
-		$("#menu-toggle").click(function(e) {
-			e.preventDefault();
-			$("#wrapper").toggleClass("active");
-		});
-	</script>
-
-
-
-<!--
-<nav id="primary_nav_wrap">
 <ul>
-  <li class="current-menu-item"><a href="#">Home</a></li>
-  <li><a href="#">FAQ</a>
-    <ul>
-      <li><a href="#">Sub Menu 1</a></li>
-      <li><a href="#">Sub Menu 2</a></li>
-      <li><a href="#">Sub Menu 3</a></li>
-      <li><a href="#">Sub Menu 4</a>
-        <ul>
-          <li><a href="#">Deep Menu 1</a>
-            <ul>
-              <li><a href="#">Sub Deep 1</a></li>
-              <li><a href="#">Sub Deep 2</a></li>
-              <li><a href="#">Sub Deep 3</a></li>
-                <li><a href="#">Sub Deep 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Deep Menu 2</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Sub Menu 5</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Menu 2</a>
-    <ul>
-      <li><a href="#">Sub Menu 1</a></li>
-      <li><a href="#">Sub Menu 2</a></li>
-      <li><a href="#">Sub Menu 3</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Menu 3</a>
-    <ul>
-      <li class="dir"><a href="#">Sub Menu 1</a></li>
-      <li class="dir"><a href="#">Sub Menu 2 THIS IS SO LONG IT MIGHT CAUSE AN ISSEUE BUT MAYBE NOT?</a>
-        <ul>
-          <li><a href="#">Category 1</a></li>
-          <li><a href="#">Category 2</a></li>
-          <li><a href="#">Category 3</a></li>
-          <li><a href="#">Category 4</a></li>
-          <li><a href="#">Category 5</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Sub Menu 3</a></li>
-      <li><a href="#">Sub Menu 4</a></li>
-      <li><a href="#">Sub Menu 5</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Menu 4</a></li>
-  <li><a href="#">Menu 5</a></li>
-  <li><a href="#">Menu 6</a></li>
-  <li><a href="#">Contact Us</a></li>
-</ul>
-</nav>
 
-<body>
--->
-</body>
-</html>
+<ol>1) A body fluid with lots of HIV in it:</ol>
+
+<li>a.Sex fluids – semen, pre-ejaculatory fluid (“pre-cum”, the fluid secreted by the penis during sex before ejaculation), vaginal fluids, menstrual blood, and anal secretions (the fluid that is secreted by the lining of the anus).</li>
+
+<li>b.Blood</li>
+
+<li>c.Breast-milk (very small amounts of HIV, but enough to infect a baby)</lo>
+
+<li>d.Brain and spinal cord fluid</li>
+
+<ol>2)An activity that shares these fluids:</ol>
+
+<li>a.Unprotected anal or vaginal sex (very rarely, oral sex can also transmit HIV)</li>
+
+<li>b.Sharing needles used for medications, drugs, tattooing or piercing, etc.</li>
+
+<li>c.From mother to child during pregnancy, childbirth and/or breastfeeding</li>
+
+<li>d.Occupational exposure (ie. usually in medical and emergency professions, through accidental cuts/pokes from used needles and scalpels, etc.)</li>
+
+<ol>3)A way for HIV to get into the bloodstream:</ol>
+
+<li>a.Through a fresh cut, sore or puncture wound (ie. a needle poke)
+
+<li>b.Through the special cells of sex membranes (the delicate skin that lines the inside of the penis, the vagina, and the anus)</li>
+
+<li>c.From mother to baby through the placenta and umbilical chord, if these organs are damaged during pregnancy or childbirth. I
+
+f there is at least one thing from each category happening at the same time, then there is a high risk for HIV infection.</li>
+
+
+
+<h3><ol>How can someone tell if they have HIV? Are there symptoms?</h3></ol>
+
+<>The only way to know for sure if you’ve got HIV is to get a special blood test for HIV.
+
+Some people get symptoms when they’re newly infected – but not everybody. These symptoms are called “Seroconversion Illness”. Seroconversion Illness is caused by the body’s immune system reacting to HIV, and it can sometimes feel like a cold or flu. It can also include such things as swollen glands, a rash, headache, nausea and/or diarrhea.
+
+But any of these things could happen to someone for lots of reasons - not just HIV. So, if you’ve had unprotected sex or shared a needle, the only way to know for sure if you’ve been infected with HIV is to get a special blood test for the virus.
+
+Unfortunately, it’s almost impossible to find out right after possible exposure to HIV whether someone has been infected. There is a time-gap between when someone is exposed to HIV, and when a blood test can tell if they’ve been infected. This is known as the “Window Period”. T
+
+here are a few different HIV tests out there, and each has a different window period. The most common test across Canada can detect evidence of HIV in the blood between 3-12 weeks after someone’s been infected.
+
+However, there are some that are more sensitive and can find HIV in the blood within 12 days after infection.
+
+For more information on HIV testing, visit our testing page. You can also check out http://www.thebody.com/content/art49932.html
+
+_____________________
+
+<h3>How easy is it to get HIV? I mean, can I get it from a mosquito bite, or public bathroom, or something like that?</h3>
+
+<p>No – you can’t get it from bug bites or public bathrooms. Actually, HIV needs pretty specific conditions to pass from one person to another (see above question). Most folks don’t realize that HIV only lives in certain body fluids – so for HIV to infect someone, they have to get infected blood or sex fluids into their bloodstream.
+
+Body fluids that don’t transmit HIV are:
+
+Saliva (“spit”)
+Sweat or skin oils
+Tears - Nasal mucous (“snot”)
+Urine (“pee”) and feces (“poo”)
+Vomit
+Ear wax
+The other thing most folks don’t know is that HIV dies outside of the body fairly quickly. It can’t survive in open-air very well, and so is usually dead once it hits the air in a matter of moments. That’s why you can’t get it from touching public surfaces – even if there are traces of blood or sex fluid. However, it can survive quite well when inside the body (like during unprotected sex) or inside vacuum-sealed environments (Iike the barrel of an injection needle).</p>
+<h2>
+You CAN’T get HIV from:</h2>
+
+<p>Bug bites, animal bites or scratches
+Using public toilets, bathrooms, pools or showers
+Going to the gym, sharing exercise equipment
+Touching public surfaces – like doorknobs, phone booths, or public benches
+Sharing food, drink or dishes
+Sneezing
+Sharing items of clothing, bed linens or towels
+Kissing, hugging or touching
+Masturbation
+Sports (Note: boxing, professional-level martial arts and UFC are regulated sports with testing requirements for all athletes…)
+Basic aesthetic services (any procedure that doesn’t cause bleeding, including basic facials, manicures, pedicures, massages, etc.)
+Sterile body art practices like tattooing, piercing, scarification and branding (NOTE: Licensed professionals/businesses are required to adhere to strict medical-grade codes of practice and regular inspection, including the use of “Universal Precautions”, the use of new needles/sharps on each new client, and sterilization of all re-useable equipment…)
+Professional health care, where the use of “Universal Precautions” is required with every patient (ie. gloves, new needles/scalpels/sharps, sterilization of all re-usable equipment and surfaces, etc.)
+_____________________</p>
+
+Is there any guaranteed way to avoid getting HIV?
+
+The only guaranteed way to avoid getting HIV is to abstain from all HIV risk activities – anything that shares sex fluids or blood between two or more people.
+
+Activities that are high-risk for HIV include:
+
+Unprotected anal and/or vaginal sex, and – rarely – through giving someone oral sex (if there are cuts/sores in the mouth)
+Sharing needles used for injecting drugs or medication
+Sharing body art equipment, including tattooing and piercing needles
+From mother to child through pregnancy, birth and breastfeeding
+Healthcare accidents, including needle-stick injuries, cuts from used scalpels/sharps, and blood splashes to exposed mucous membranes.
+Receiving donated blood/organs in countries where sufficient HIV testing is lacking. (Note: Canada is known to be extremely safe for giving and getting blood and organs.)
+If you choose to have sex or use substances, there are still ways to be safer and reduce the risk of getting HIV. _____________________
+
+I’m having sex. Can I avoid getting HIV?
+
+Yes! You can still have a sex life, and avoid getting HIV – good news!
+
+The best way to avoid HIV if you are having sex is to use condoms. Condoms are a kind of “barrier method” of contraception. Since HIV can live in an infected person’s sex fluids and blood, barrier methods work by creating a physical “barrier” between people’s sex organs, preventing contact with each others' sex fluids – and any HIV that might be there. Condoms aren’t the only barrier method out there – but they are the most common.
+
+Here’s the complete list of barrier methods people can use to have safer sex:
+
+Condoms: for wearing over penises and sex toys,
+Internal condoms: for wearing inside of vaginas and bums,
+Dental dams: for keeping sex fluids out of someone’s mouth when they go down on a vagina or bum,
+Gloves:to protect hands with fresh cuts or severe skin conditions from contact with sex fluids that might carry HIV, or to keep their hands from bleeding on their sex partner’s vagina / penis/bum.
+Barriers should be made of a material that HIV can’t pass though – latex or polyurethane. You can check the label of the product package to make sure.
+
+Also, for them to work, they need to be used properly – they have to be put on before any sex starts, kept on the whole time during sex, and used every time people have sex. Finally, using water-based or condom-safe lubricant can help keep condoms/barriers from breaking, and make sex using barriers feel a lot better. For more information on sexual transmission of HIV, safer sex and healthy sexuality, check out www.sexualityandu.ca.
+
+_____________________
+
+Can I get HIV from used needle I found on the ground?
+
+From an accidental poke? Very unlikely. This is because HIV dies in open-air very quickly – within a few moments. So, if there was HIV on the tip of the needle, and it got poked through your skin and into your bloodstream, it’s probably already dead and unable to infect you.
+
+From re-using the needle to inject yourself? Yes! If you were to pick up the needle and use it, then you could be at high risk for HIV. That’s because if there is any HIV inside the barrel of the needle, then it could still be alive because it’s protected from the air. So – never use abandoned needles, or needles that might have been used by someone else before you. Only use new ones that you’ve gotten from a pharmacy or needle exchange.
+
+If you do get accidentally poked by an abandoned needle, here’s what to do:
+
+Don’t panic. Chances are, you are going to be just fine.
+Don’t squeeze the area of the poke, or try to “suck out the poison.” This won’t help, and might actually end up forcing any germs/infections further into your blood.
+If it bleeds, let it bleed. It’s your body’s way of flushing out the wound.
+Wash your hands thoroughly with soap and water, dry, and put a band-aid on the site of the poke. - Try to get to a hospital emergency room as soon as possible – preferably within the first 7 hours afterward. This will allow the healthcare team to administer the proper shots and medications to ward off skin infections, hepatitis viruses, tetanus, etc
+Depending on the situation, they may also offer you some medications to help guard against any live HIV that might have been in the needle.
+Keep in touch with your health care provider about how your are feeling in the days/weeks afterward.
+Want more information on what to do when you find an abandoned needle? Check out www.avi.org/toolkit _____________________
+
+I’m using needles to inject drugs/substances. Can I still avoid getting HIV?
+
+Yes! You can use injection needles and still avoid getting HIV. The risk for HIV comes from sharing needles – not using needles. This is because when someone shares a needle, there’s always blood there from the last person that used it. If the last person who used the needle has HIV, then everyone who uses it next will be exposed to HIV, too.
+
+Needles can be used for a lot of things – not just illegal drugs. Needles or blades that go through the skin or are in contact with blood for any reason should never be shared, including:
+
+Needles for medication (ie. insulin injections, etc.)
+Needles for injection of illegal drugs (ie. heroin, crack, etc.)
+Steroid needles
+Body art equipment: tattooing and piercing needles, scarification tools, branding tools.
+Acupuncture needles
+Surgery equipment (ie. scalpels, clamps, etc.)
+Flushing out the inside of a needle with water or bleach is not guaranteed to get rid of any HIV that might be there. Neither is boiling a needle or exposing it to an open flame. This is because the inside of a needle can protect HIV from open air (where it would die within moments). So, it’s best and easiest to just use a new needle every time you inject anything. New needles can be found at a variety of places, including needle exchanges, some public health clinics and some pharmacies.
+
+So, never share any of the needles you use to give yourself a substance, and – just to be safe - never use anybody else’s injection equipment, either. This includes ties, water, spoons, cotton/alcohol swabs, and anything else that could have traces of blood on it. For more information on how to stay safer when using substances, check out our harm reduction section.
+
+_____________________
+
+I’m pregnant – can I give HIV to my baby?
+
+Yes – it’s possible. BUT - with the right care and support - you can still have a healthy pregnancy, birth, and baby. For a baby to get HIV, the mother needs to have it first. T
+
+hen, if she’s not getting treated for HIV, there’s about a 25% chance she might give HIV to her baby during pregnancy or childbirth. However, if she does get treated for HIV during her pregnancy, then the risk of giving HIV to her baby is reduced to less than 5% - very good news, indeed! T
+
+here is a small chance that a mother with HIV could pass the virus to her baby during breastfeeding, too. So, for that reason, most mothers with HIV are advised to feed their baby formula instead of their breast-milk. In many regions, the cost of buying formula can be supported through Canada’s Medicare program.
+
+If you are pregnant, it’s a good idea to get screened for HIV – just to be safe. Ask your doctor for the screening, or go to a HIV testing clinic in your area (check out the testing section of our site for more info).
+
+If you have HIV, you can still have a healthy pregnancy and birth without passing the virus on to your baby. You will need to see a doctor that specializes in HIV, and can prescribe the medications to take during your pregnancy that will help reduce the risk for you and your baby. Want more information for women on motherhood with HIV?  For a general overview of HIV and pregnancy, check out http://www.thebody.com/index/treat/pregnancy.html
+
+_____________________
+
+I’ve heard there’s treatment for HIV…is that true? How well does it work?
+
+Yes, there is treatment. In fact, the treatment can make it possible for someone to live with HIV, but avoid getting sick with AIDS. The best option is to take anti-HIV medications, also known as “Anti-retroviral Therapy”.
+
+These medications don’t get rid of HIV, but are more like “birth control pills” for the virus. They do two main things:
+
+1) The drugs help to prevent HIV from multiplying, and
+
+2) This helps the immune system “catch up” by killing off infected cells and letting new immune cells survive.
+
+This helps the immune system to “rebuild” itself. When taken properly – every day, as prescribed – Anti-Retroviral Therapy can help the immune system stay strong and able to control HIV.
+
+When HIV is under control, there are lots of extra healthy immune cells to fight other infections before they become serious – thus helping to prevent the AIDS stage. Want to know more about Anti-Retroviral Therapy? Check out . Looking for more info on how to get HIV treatment in Canada? Check out visit http://www.catie.ca/eng/Publications/DrugAccess/DrugAccessIndex.shtml#provincial
+
+_____________________
+
+Are there other options to treat HIV/AIDS besides medications?
+
+Yes. Research has shown that there are lots of things that can help improve the health and wellness of people living with HIV. Because the immune system and our bodies respond to good care, simple, everyday things like regular physical activity, balanced nutrition, lots of clean water, good housing and adequate rest/sleep can make a big difference to the health of someone living with HIV.
+
+As well, the immune system is particularly sensitive to stress, so things like seeing a regular counselor, having someone trusted to talk to, being in healthy relationships, and having things to do that make you feel good about yourself are key to a healthy mind and heart when living with HIV.
+
+Finally, there are plenty of other health care practices besides medication that have been shown to help with both physical and emotional wellness - such as acupuncture, sweat lodge and smudging, spiritually-grounding practices such as meditation, prayer and singing/dancing, and homeopathic medicine have all been shown to help people living with HIV get stronger and healthier.
+
+Interested in how to live well with HIV? Check out the Canadian HIV/AIDS Treatment and Information Exchange at www.catie.org.
+
+      </div><!-- end page content -->
+
+
+      </div>
+    </div>
+</div>
+</div>

@@ -19,6 +19,7 @@ class ProfilesController < ApplicationController
 	# listing = Listing.find(params[:listing_id])
 	@user = current_user
 	@profile = @user.profiles.new(profile_params)
+	@profile.user_id = current_user.user_id
 
 	if @profile.save
 	  redirect_to user_profile_path(@user, @profile), notice: "Your profile has been created!"

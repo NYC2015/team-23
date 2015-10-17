@@ -12,4 +12,7 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( css/bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( css/simple-sidebar.css )
+Rails.application.config.assets.precompile += %w( jquery.fullPage.min.css )
 Rails.application.config.assets.precompile += %w( home.css )
+Rails.application.config.assets.precompile += %w( jquery.fullPage.min.js )
+Rails.application.config.assets.precompile += %w( jquery.fullPage.css )

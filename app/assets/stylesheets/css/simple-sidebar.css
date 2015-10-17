@@ -13,7 +13,7 @@
     margin-left: -150px;
     left: 35px;
     width: 150px;
-    background: #222;
+    background: #000;
     position: fixed;
     height: 100%;
     z-index: 10000;
@@ -51,8 +51,8 @@
     float: left;
     text-decoration: none;
     width: 150px;
-    background: #252525;
-    border-top: 1px solid #373737;
+    /*background: #252525;*/
+    /*border-top: 1px solid #373737;*/
     border-bottom: 1px solid #1A1A1A;
     -webkit-transition: background .5s;
     -moz-transition: background .5s;

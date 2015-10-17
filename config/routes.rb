@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :sms
   devise_for :users
   get '/faq' => 'static#faq', as: :faq
-
+  get '/help-near-you' => 'static#help', as: :help
   resources :users do
     resources :profiles
   end
