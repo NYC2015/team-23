@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Important Info</title>
 <link rel="stylesheet" type="text/css" href="faq.css" />
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
 <link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
 
@@ -52,6 +52,15 @@
 </div>
 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+		});
+	</script>
 
 
 
