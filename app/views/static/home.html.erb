@@ -8,27 +8,42 @@
 </head>
 
 <body>
-	<div class="jumbotron" style="text-align: center;">
-		<h1>Text</h1>
-		<%= link_to('Get Started', new_user_registration_path, class: "btn btn-primary btn-lg")  %>
-		<p></p>
-		<p>Already a user?   <%= link_to('Login', new_user_session_path)  %></p>
+
+	<div id="wrapper" class="active">
+
+		<div id="sidebar-wrapper" class="col-md-2">
+			<ul id="sidebar_menu" class="sidebar-nav">
+				<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+			</ul>
+			<ul class="sidebar-nav" id="sidebar">
+				<li role="presentation" class="active"><a href="#home">Home</a></li>
+				<li role="presentation"><a href="#forums">Forums</a></li>
+				<li role="presentation"><a href="#hiv">HIV FAQ</a></li>
+				<li role="presentation"><a href="#help">Help Near You</a></li>
+			</ul>
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="page-content inset">
+				<div class="row">
+					<div class="jumbotron" style="text-align: center;">
+						<h1>Text</h1>
+						<%= link_to('Get Started', new_user_registration_path, class: "btn btn-primary btn-lg")  %>
+						<p>Already a user?   <%= link_to('Login', new_user_session_path)  %></p>
+					</div>
+
+					<p>This is a homepage, must add content</p>
+				</div>
+			</div>
+		</div>
 	</div>
-
-
-	<h1> Homepage </h1>
-
-	<div id="sidebar" class="col-md-2">
-		<ul class="nav nav-pills nav-stacked">
-			<li role="presentation" class="active"><a href="#home">Home</a></li>
-			<li role="presentation"><a href="#forums">Forums</a></li>
-			<li role="presentation"><a href="#hiv">HIV FAQ</a></li>
-			<li role="presentation"><a href="#help">Help Near You</a></li>
-		</ul>
-	</div>
-
-	<p>This is a homepage, must add content</p>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src=""../../assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+	</script>
 </body>
