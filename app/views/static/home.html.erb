@@ -15,7 +15,7 @@
 		<div id="sidebar-wrapper">
 			<ul id="sidebar_menu" class="sidebar-nav">
 				<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
-				<li role="presentation" class="active"><a href="#home">Home</a></li>
+				<li role="presentation" class="active"><a href="/">Home</a></li>
 				<li role="presentation"><a href="#forums">Forums</a></li>
 				<li role="presentation"><a href="faq.html.erb">HIV FAQ</a></li>
 				<li role="presentation"><a href="HelpNearYou.html.erb">Help Near You</a></li>
@@ -25,8 +25,9 @@
 		<div id="page-content-wrapper">
 			<div class="page-content inset">
 				<div class="row">
-					<div class="jumbotron" style="text-align: center;">
-						<h1>Text</h1>
+					<div class="jumbotron container" style="text-align: center;">
+						<%= image_tag("1.jpg") %>
+						<br>
 						<%= link_to('Get Started', new_user_registration_path, class: "btn btn-primary btn-lg")  %>
 						<p>Already a user?   <%= link_to('Login', new_user_session_path)  %></p>
 					</div>
