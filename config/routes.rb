@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/faq1' => 'static#faq1', as: :faq1
   get '/faq2' => 'static#faq2', as: :faq2
   get '/faq3' => 'static#faq3', as: :faq3
+  get '/HelpNearYou' => 'static#helpnearyou', as: :helpnearyou
 
 
 

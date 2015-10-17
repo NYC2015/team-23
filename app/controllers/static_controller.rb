@@ -7,5 +7,6 @@ class StaticController < ApplicationController
     def faq
     end
 
-
+	def helpnearyou
+	end
 end
