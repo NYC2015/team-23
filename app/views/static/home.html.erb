@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-	<link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../../assets/bootstrap/css/simple-sidebar.css" rel="stylesheet">
-	<link href="home.css" rel="stylesheet" type=text/css">
+	<link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="../../assets/bootstrap/css/simple-sidebar.css" rel="stylesheet"/>
+	<link href="home.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 	<div class="jumbotron" style="text-align: center;">
 		<h1>Text</h1>
-		<button type="button" class="btn btn-primary btn-lg">Get Started</button>
+		<%= link_to('Get Started', new_user_registration_path, class: "btn btn-primary btn-lg")  %>
 		<p></p>
-		<p>Already a user? <a href="login.html.erb">Login</a> </p>
+		<p>Already a user?   <%= link_to('Login', new_user_session_path)  %></p>
 	</div>
 
 
