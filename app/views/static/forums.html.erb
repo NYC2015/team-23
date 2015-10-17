@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="../../assets/stylesheets/css/bootstrap.min.css" rel="stylesheet"/>
 	<link href="forums.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -35,6 +35,15 @@
 		<h1 class="forumheader">Stories</h1>
 	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../../assets/javascripts/js/bootstrap.min.js"></script>
+
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+		});
+	</script>
 
 </body>
 
