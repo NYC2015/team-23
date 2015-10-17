@@ -4,15 +4,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Important Info</title>
 <link rel="stylesheet" type="text/css" href="faq.css" />
-<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+<link href="../../assets/stylesheets/css/bootstrap.min.css" rel="stylesheet"/>
 
 
 </head>
 
-<div class="jumbotron">
 
-<a href="home.html.erb">Home</a>
+<div id="wrapper" class="active">
+	<div id="sidebar-wrapper">
+		<ul id="sidebar_menu" class="sidebar-nav">
+			<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+			<li role="presentation" class="active"><a href="#home">Home</a></li>
+			<li role="presentation"><a href="forums.html.erb">Forums</a></li>
+			<li role="presentation"><a href="faq.html.erb">HIV FAQ</a></li>
+			<li role="presentation"><a href="HelpNearYou.html.erb">Help Near You</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="jumbotron">
 <h1><center>Important Info</center></h1>
 <p><center>FAQs</center></p>
 </div>
@@ -42,6 +53,15 @@
 </div>
 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../../assets/javascripts/js/bootstrap.min.js"></script>
+
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+		});
+	</script>
 
 
 

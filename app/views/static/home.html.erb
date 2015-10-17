@@ -1,13 +1,31 @@
 
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8" />
+	<%= stylesheet_link_tag "css/bootstrap.min" %>
+	<%= stylesheet_link_tag "css/simple-sidebar" %>
+</head>
+
+<body>
+
+
 	<div id="wrapper" class="active">
 
 		<div id="sidebar-wrapper">
 			<ul id="sidebar_menu" class="sidebar-nav">
 				<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+<<<<<<< HEAD
 				<li role="presentation" class="active"><a href="#home">Home</a></li>
 				<li role="presentation"><a href="#forums">Forums</a></li>
 				<li role="presentation"><%= link_to "HIV FAQ", faq_path %></li>
 
+=======
+				<li role="presentation" class="active"><a href="/">Home</a></li>
+				<li role="presentation"><a href="forums.html.erb">Forums</a></li>
+				<li role="presentation"><a href="faq.html.erb">HIV FAQ</a></li>
+>>>>>>> 7a3d3b20eb54c7c8b84a2186382a4404deff0c03
 				<li role="presentation"><a href="HelpNearYou.html.erb">Help Near You</a></li>
 			</ul>
 		</div>
@@ -15,12 +33,25 @@
 		<div id="page-content-wrapper">
 			<div class="page-content inset">
 				<div class="row">
-					<div class="jumbotron" style="text-align: center;">
-						<h1>Text</h1>
+					<div class="jumbotron container" style="text-align: center;">
+						<%= image_tag("1.jpg") %>
+						<br>
 						<%= link_to('Get Started', new_user_registration_path, class: "btn btn-primary btn-lg")  %>
 						<p>Already a user?   <%= link_to('Login', new_user_session_path)  %></p>
 					</div>
 				</div>
 			</div>
 		</div>
+	
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+		});
+	</script>
+</body>
